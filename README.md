@@ -1,4 +1,5 @@
 # Lets Go :)
+https://www.linkedin.com/pulse/build-chrome-extension-track-active-tab-time-using-schaffne
 
 # Getting Started with Create React App
 
