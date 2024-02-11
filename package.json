@@ -1,5 +1,5 @@
 {
-  "name": "chrome-tab-tracker",
+  "name": "chrome-extension-video-downloader",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
