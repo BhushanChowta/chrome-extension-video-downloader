@@ -8,5 +8,13 @@
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["activeTab", "tabs"]
+  "optional_permissions": [
+    "topSites"
+  ],
+  "host_permissions": [
+    "*://web.whatsapp.com/*",
+    "https://*/*",
+    "http://*/*"
+  ],
+  "permissions": ["activeTab", "tabs", "scripting"]
 }
