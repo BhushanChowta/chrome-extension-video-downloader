@@ -1,6 +1,5 @@
-// App.js
 import React, { useState, useEffect } from 'react';
-import { Container, Box, List, ListItem, ListItemText } from '@mui/material';
+import { Container, Box, List, ListItem, ListItemText, Button } from '@mui/material';
 
 function App() {
   const [tabData, setTabData] = useState({});
@@ -43,16 +42,27 @@ function App() {
     };
   }, []);
 
+  const handleDownload = () => {
+    if (tabData.videoSrc) {
+      chrome.downloads.download({ url: tabData.videoSrc });
+    }
+  };
+
   return (
-    <Container>
-      <Box>
-        <List>
-          <ListItem>
-            <ListItemText primary={tabData.title || 'Loading...'} secondary={tabData.videoSrc || 'No video found.'} />
-          </ListItem>
-        </List>
-      </Box>
-    </Container>
+      <Container maxWidth="sm" style={{ marginTop: '20px', marginBottom: '20px' }}>
+        <Box sx={{ border: '1px solid #ccc', borderRadius: '5px', padding: '20px' }}>
+          <List>
+            <ListItem>
+              <ListItemText primary={tabData.title || 'Loading...'} secondary={tabData.videoSrc || 'No video found.'} />
+            </ListItem>
+          </List>
+          {tabData.videoSrc && (
+            <Button variant="contained" onClick={handleDownload}>
+              Download
+            </Button>
+          )}
+        </Box>
+      </Container>
   );
 }
 

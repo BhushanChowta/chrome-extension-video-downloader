@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Tab Tracker",
-  "version": "1.0",
+  "version": "2.0",
   "action": {
     "default_popup": "index.html"
   },
@@ -16,5 +16,5 @@
     "https://*/*",
     "http://*/*"
   ],
-  "permissions": ["activeTab", "tabs", "scripting"]
+  "permissions": ["activeTab", "tabs", "scripting","downloads"]
 }
